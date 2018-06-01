@@ -1,0 +1,102 @@
+
+  /** JSON数据内容及类型详细说明如下：**/
+
+{
+    "base": {  		//用户访问信息
+        "PV": "1",  	 							 // page view，基于单次会话统计，均为1
+        "UV": 0,   									 // unique view，基于单次会话和cookies统计，历史用户为0，新用户为1，cookies有效期24小时，
+        "IP": "59.172.176.229",  					 // 访问者ip地址
+		"region": "湖北省武汉市",  					 // 访问者地区
+        "visit_time": "2018/4/11 上午10:13:39",   	 // 访问页面的时刻
+        "stay_time": "84.34"  		 				 // 页面访问时长，以秒计
+    },
+	
+    "text": {      //文本行为数据
+		"TextAction": [								// Array
+		  {
+			"text": "轻近午天，傍花随柳过前川。",   // 选中的文本
+			"copy": 0,								// 是否复制，0或1
+			"annotate": "红红火火恍恍惚惚或或"		// 标注内容
+		  },
+		  {
+			"text": "送郭司仓",
+			"copy": 0,
+			"annotate": "这首诗还是不错滴"
+		  }
+		]
+	  },
+	  
+	  "img": {     //图像行为数据
+		"ImgAction": [								// Array
+		  {
+			"index": "MyImg_1",						// 图片元素id
+			"open": 0,								// 在新窗口打开次数
+			"copy": 0,								// 复制图片次数
+			"save": 0,								// 保存图片次数
+			"link": 0,								// 复制图片链接次数
+			"annotate": {								
+			  "times": 2,							// 标记图片次数
+			  "content": [							// Array
+				{
+				  "position_begin": "(83,102)",		// 标注开始位置
+				  "position_end": "(226,187)",      // 标注结束位置
+				  "text": "哈哈哈哈或"              // 标注内容
+				},
+				{
+				  "position_begin": "(171,76)",
+				  "position_end": "(296,232)",
+				  "text": "love"
+				}
+			  ]
+			},
+			"url": "http://120.79.146.123/UserAction/img/img-1.jpg"  // 图片真实url
+		  }
+		]
+	  },
+	  
+	  "media": {    //媒体行为数据
+		"MediaAciton": [							// Array
+		  {
+			"index": "MyAudio",						// 媒体元素id
+			"play": 1,								// 是否播放，0或1
+			"jump": {
+			  "times": 5,							// 跳转次数
+			  "moment": [							// Array，跳转时刻
+				"0:24",
+				"0:52",
+				"1:53",
+				"2:41",
+				"3:00"
+			  ]
+			},
+			"end": 0,								// 是否全部播放完毕，0或1
+			"waiting": 0,							// 是否缓冲等待，0或1
+			"volumechange": 0,						// 是否调节音量，0或1
+			"length":0, 							// 媒体长度
+			"playduration": 38.05					// 实际播放时长，停止期间不计入，以秒计
+		  }
+		]
+	  },
+	  
+	  "form": {		//表单行为数据
+		"FormAction": [								// Array
+		  {
+			"index": "Input_Name",					// 文本框id
+			"click": 1,								// 点击次数
+			"input": 1,								// 是否输入，0或1
+			"time": 8.58,							// 停留时长，以秒计
+			"text": "我叫李世杰"					// 输入的文本
+		  }
+		]
+	  },
+	  
+	  "link": {		//链接行为数据
+		"LinkAction": [								// Array
+		  {
+			"index": "link_1",						// 链接id
+			"click": 2,								// 链接点击次数
+			"url": "http://120.79.146.123/UserAction/#Text_Area"	// 链接url
+		  }
+		]
+	  }
+}
